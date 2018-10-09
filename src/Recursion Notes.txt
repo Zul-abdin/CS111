@@ -1,0 +1,27 @@
+Recursion
+    Is not the same as ITERATIVE code
+        ITERATIVE code uses LOOPS
+    RECURSIVE code uses recursion
+
+        A Recursive algorithm must:
+            1. Have a bare case
+            2. Change its state and move toward the bare case (recursive case)
+            3. Call itself recursively
+
+
+Factorial:
+    1! = 1  <---- Base Case
+    2! = 2 * 1
+    3! = 3 * 2 * 1
+    4! = 4 * 3 * 2 * 1
+
+    Generally, n! = n * (n-1)!
+
+Now, lets make Factorial recursive:
+
+    Factorial (n)
+        IF n equals 1 THEN  <----- Base Case
+            RETURN 1
+        ELSE
+            RETURN n * Factorial (n-1)  <----- Moves towards the Base case
+        ENDIF
