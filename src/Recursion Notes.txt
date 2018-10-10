@@ -5,7 +5,7 @@ Recursion
 
         A Recursive algorithm must:
             1. Have a base case
-            2. Change its state and move toward the bare case (recursive case)
+            2. Change its state and move toward the base case (recursive case)
             3. Call itself recursively
 
 
