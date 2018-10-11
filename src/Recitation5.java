@@ -1,4 +1,4 @@
-public class Recitation5_GCF_Prime {
+public class Recitation5 {
 
     public static  int GCF (int x, int y){
 
