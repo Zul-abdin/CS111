@@ -37,4 +37,64 @@ public class RecursiveMethods {
         }
     }
 
+    /*
+     * Consider a line of n bunnies
+     * Each odd bunny has 2 ears and each even bunny has 3 ears
+     * returns the total number of ears
+     */
+    public static int BunnyEars (int n){
+
+        if ( n == 1){     // Base Case
+
+            return 2;
+        }
+
+        else if (n % 2 == 0){
+
+            return 3 + BunnyEars(n-1); // Recursive Step <--- Makes n smaller
+
+        } else {
+
+            return 2 + BunnyEars(n-1); // Recursive Step <---- Makes n smaller
+
+        }
+
+    }
+    /*
+     *
+     *
+     */
+    public static int sumPyramidBlocks (int n){
+
+        if (n == 1){
+
+            return 1;
+
+        } else {
+
+            return n + sumPyramidBlocks(n-1);
+        }
+
+    }
+
+    public static int Fibonacci (int n){
+
+        if (n == 0 || n == 1){
+            return 1;
+        } else {
+            return Fibonacci(n-1) + Fibonacci(n-2);
+        }
+
+    }
+
+    public static int FibonacciUp (int n){
+
+        if (n == 0 || n == 1){
+            return 1;
+        } else {
+            return 0;
+        }
+
+    }
+
 }
