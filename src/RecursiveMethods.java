@@ -61,8 +61,8 @@ public class RecursiveMethods {
 
     }
     /*
-     *
-     *
+     * Sums the Blocks in a Pyramid of blocks
+     * Basically factorial except with addition
      */
     public static int sumPyramidBlocks (int n){
 
@@ -87,14 +87,5 @@ public class RecursiveMethods {
 
     }
 
-    public static int FibonacciUp (int n){
-
-        if (n == 0 || n == 1){
-            return 1;
-        } else {
-            return 0;
-        }
-
-    }
 
 }
