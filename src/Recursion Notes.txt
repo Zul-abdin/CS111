@@ -25,3 +25,11 @@ Now, lets make Factorial recursive:
         ELSE
             RETURN n * Factorial (n-1)  <----- Moves towards the Base case
         ENDIF
+
+
+Bunny Ears:
+    Bunnies are standing in a line
+        1, 2, 3, 4, 5, n
+    Odd Bunnies have 2 ears
+    Even bunnies have 3 ears
+    Write a recursive algorithm to count the ears
