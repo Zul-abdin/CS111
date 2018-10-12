@@ -32,4 +32,4 @@ Bunny Ears:
         1, 2, 3, 4, 5, n
     Odd Bunnies have 2 ears
     Even bunnies have 3 ears
-    Write a recursive algorithm to count the ears
+    Write a recursive algorithm to count the ears (Written in RecursiveMethods.java)
