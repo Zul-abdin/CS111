@@ -3,8 +3,8 @@ public class TwoLargest {
     public static void main(String[] args) {
 
         int count = 0;  //Counts how many values (excluding the terminating values) have been entered by the user
-        double largestVal = 0;  //The Largest Value
-        double secLargestVal = 0;   //The Second-Largest Value
+        double largestVal = -Double.MAX_VALUE;  //The Largest Value
+        double secLargestVal = -Double.MAX_VALUE;   //The Second-Largest Value
         boolean termination = true; //Tells the while loop when to stop
 
         //Asks and sets the Terminating Value
