@@ -87,5 +87,26 @@ public class RecursiveMethods {
 
     }
 
+    public static void printDescend(int n){
+
+        if (n == 0){
+            return;
+        } else {
+            System.out.println(n);
+            printDescend(n-1);
+        }
+
+    }
+
+    public static double Exponent ( double x, int m ){
+
+        if ( m == 0 || x == 1 ) {
+            return 1;
+        } else {
+            return Exponent(x,  m-1) * x;
+        }
+
+    }
+
 
 }
