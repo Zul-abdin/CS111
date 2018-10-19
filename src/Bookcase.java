@@ -40,6 +40,21 @@ public class Bookcase {
 
         System.out.println(book3);
 
+        Book book4 = new Book("Mortal Instrument", "Cassandra");
+
+        System.out.println(book4.getAuthor());
+
+        Book book5;
+
+        //book4 refers to the same address in memory as book 2
+        //The original book4 "Mortal Instrument" will be Garbage Collected
+        book4 = book2;
+
+        book3.setTitle("Calculus Textbook");
+
+        System.out.println(book3);
+
+
     }
 
 }

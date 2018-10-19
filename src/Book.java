@@ -44,4 +44,28 @@ public class Book {
 
     }
 
+    // Accessor Methods [get & set]
+    public void setTitle ( String Booktitle) {
+        title = Booktitle;
+    }
+
+    public String getTitle () {
+        return title;
+    }
+
+    public void  setPageNumber ( int page) {
+        pageNumber = page;
+    }
+
+    public int getPageNumber () {
+        return  pageNumber;
+    }
+
+    public void setAuthor(String Bookauthor) {
+        author = Bookauthor;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
 }
