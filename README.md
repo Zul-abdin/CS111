@@ -7,7 +7,7 @@ Rutgers Fall 2018
 - [x] Introductory Java Programming
     - [x] Midterm 1 - Tuesday October 9th 9:40PM-11:00PM
 - [x] Procedural Programming
-- [ ] Recursion
+- [x] Recursion
 - [ ] Object-Oriented Programming
     - [ ] Midterm 2 - Tuesday November 13th 9:40PM-11:00PM
 - [ ] Data Structures
