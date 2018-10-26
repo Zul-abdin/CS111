@@ -1,3 +1,7 @@
+package autolab.assignment2;
+
+import rutgers.cs.IO;
+
 /*
  * Takes 2 int inputs and multiplies them
  */

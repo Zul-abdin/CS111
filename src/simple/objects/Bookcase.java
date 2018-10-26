@@ -1,3 +1,5 @@
+package simple.objects;
+
 public class Bookcase {
 
     public static void main(String[] args) {

@@ -1,3 +1,7 @@
+package autolab.assignment3;
+
+import rutgers.cs.IO;
+
 public class DonateToPaws {
 
     public static double donationFee (double donationAmount){

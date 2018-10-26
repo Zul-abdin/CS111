@@ -3,7 +3,7 @@
  */
 
 
-public class Testing {
+public class GenTesting {
 
     public static void main(String[] args) {
 

@@ -1,3 +1,7 @@
+package autolab.assignment2;
+
+import rutgers.cs.IO;
+
 public class NumberOfDigits{
 
   public static void main (String[] args) {

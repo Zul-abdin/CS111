@@ -1,3 +1,7 @@
+package simple.math;
+
+import rutgers.cs.IO;
+
 public class StarStructures {
 
     public static void StarBox(int rows, int columns){

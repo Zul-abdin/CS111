@@ -1,3 +1,5 @@
+package simple.objects;
+
 public class Book {
 
     // Instance Variables: Fields

@@ -1,3 +1,7 @@
+package autolab.assignment2;
+
+import rutgers.cs.IO;
+
 /*
  * Calculates total amount of snakes/lions/giraffes in US zoos
  */

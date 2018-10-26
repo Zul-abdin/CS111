@@ -1,3 +1,7 @@
+package autolab.assignment2;
+
+import rutgers.cs.IO;
+
 /*
  * Gives price for a stop at the gas station
  */

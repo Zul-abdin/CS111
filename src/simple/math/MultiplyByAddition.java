@@ -1,3 +1,7 @@
+package simple.math;
+
+import rutgers.cs.IO;
+
 public class MultiplyByAddition {
     public static void main(String[] args) {
 

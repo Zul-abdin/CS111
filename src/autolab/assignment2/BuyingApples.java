@@ -1,3 +1,7 @@
+package autolab.assignment2;
+
+import rutgers.cs.IO;
+
 /*
  * Displays the result of how much a certain number of pounds of apple cost.
  */
