@@ -8,8 +8,8 @@ Rutgers Fall 2018
     - [x] Midterm 1 - Tuesday October 9th 9:40PM-11:00PM
 - [x] Procedural Programming
 - [x] Recursion
-- [ ] Object-Oriented Programming
+- [x] Object-Oriented Programming
+- [x] Data Structures (Mainly Arrays)
     - [ ] Midterm 2 - Tuesday November 13th 9:40PM-11:00PM
-- [ ] Data Structures
 - [ ] Efficiency of Algorithms
     - [ ] Final - Friday December 14th 4:00PM-7:00PM
