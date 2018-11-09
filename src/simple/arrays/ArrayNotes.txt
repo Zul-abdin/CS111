@@ -1,0 +1,7 @@
+Arrays
+    Positives: fast access
+    Negatives: Cannot resize
+
+ArrayLists (the smart array)
+    Positive: fast access, resize by itself
+    Whenever they get full they double the,selves in size
