@@ -13,8 +13,5 @@ public class Testing {
 
         //Write Code Here
 
-        System.out.println(2);
-
     }
-
 }
