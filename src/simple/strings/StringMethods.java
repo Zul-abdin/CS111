@@ -12,5 +12,18 @@ public class StringMethods {
             return replace(s, o, r);
         }
     }
+    public static boolean isAnagram(String str1, String str2){
+        int index;
+        if(str1.length() != str2.length()) return false;
+        for(int i = 0;i < str1.length(); i++){
+            index = str2.indexOf(str1.charAt(i));
+            if(index == -1) {
+                return false;
+            } else {
+                str2 = str2.substring(0, index) + str2.substring(index + 1);
+            }
+        }
+        return true;
+    }
 
 }

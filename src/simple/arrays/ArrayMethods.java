@@ -63,4 +63,32 @@ public class ArrayMethods {
         return total / arr.length;
     }
 
+    public static int[] removeNeg(int[] arr){
+        int posNums = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] >= 0){
+                posNums++;
+            }
+        }
+        int index = 0;
+        int[] ans = new int[posNums];
+        for(int j = 0; j < arr.length; j++){
+            if(arr[j] >= 0){
+                ans[index] = arr[j];
+                index++;
+            }
+        }
+        return ans;
+    }
+
+    public static void duplicates(int[] arr1, int[] arr2){
+        for(int i = 0; i < arr1.length; i++){
+            for(int j = 0; j < arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    System.out.println(arr1[i]);
+                }
+            }
+        }
+    }
+
 }
