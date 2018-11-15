@@ -55,7 +55,30 @@ public class Song {
     public String toString() {
         return name + ", " + year + ", " + rating;
     }
-    public boolean equals(Object other){
-        return true;
+    public boolean equals (Object other){
+        if (other == null || !(other instanceof Song)){
+            return false;
+        }
+
+        Song s = (Song) other; //cast other into a Cat object
+        if (this.name.equals(s.getName()) && this.year == s.getYear()){
+            int i, j;
+            for(i = 0; i < this.writers.length; i++){
+                for(j = 0; j < s.getWriters().length; j++){
+                    if(this.writers[i] == s.getWriterAtIndex(j)){
+                        break;
+                    }
+                }
+                if(j >= this.writers.length){
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public int compareTo (Song other){
+        return  this.name.compareTo(other.getName());
     }
 }
