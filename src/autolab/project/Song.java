@@ -63,6 +63,15 @@ public class Song {
         Song s = (Song) other; //cast other into a Cat object
         if (this.name.equals(s.getName()) && this.year == s.getYear()){
             int i, j;
+            int countThis = 0, countS = 0;
+
+            for(int k = 0; k < this.writers.length; k++){
+                if(this.getWriterAtIndex(k) == null) countThis++;
+                if(s.getWriterAtIndex(k) == null) countS++;
+            }
+
+            if(countThis != countS) return false;
+
             for(i = 0; i < this.writers.length; i++){
                 for(j = 0; j < s.getWriters().length; j++){
                     if(this.writers[i] == s.getWriterAtIndex(j)){
