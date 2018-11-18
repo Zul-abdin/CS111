@@ -25,7 +25,11 @@ public class Song {
         return year;
     }
     public void setRating(int rating) {
-        this.rating = rating;
+        if(rating >= 1 && rating <= 5) {
+            this.rating = rating;
+        } else {
+            System.out.println("Rating Not Set: Rating has a range of [1,5].");
+        }
     }
     public int getRating() {
         return rating;
@@ -37,6 +41,10 @@ public class Song {
             if(writers[i] == null){
                 break;
             }
+        }
+        if(i == 50){
+            System.out.println("Writer Not Added: Maximum amount of writers has been reached (50).");
+            return;
         }
         writers[i] = writerName;
         numberOfWriters++;
