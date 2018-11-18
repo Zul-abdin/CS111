@@ -60,10 +60,10 @@ public class Song {
             return false;
         }
 
-        Song s = (Song) other; //cast other into a Cat object
+        Song s = (Song) other; //cast other into a Song object
         if (this.name.equals(s.getName()) && this.year == s.getYear()){
-            int i, j;
-            int countThis = 0, countS = 0;
+            int i, j; //Used to track for loops
+            int countThis = 0, countS = 0; //Used to count the amount of nulls in writers array
 
             for(int k = 0; k < this.writers.length; k++){
                 if(this.getWriterAtIndex(k) == null) countThis++;
