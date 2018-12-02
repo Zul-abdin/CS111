@@ -49,6 +49,8 @@ public class SongApp {
           for(int i = 0; i < items.length; i++){
               temp[i] = items[i];
           }
+          temp[items.length] = m;
+          items = temp;
       } else {
           items[numberOfItems] = m;
       }
@@ -66,6 +68,18 @@ public class SongApp {
   */
   public boolean removeSong (Song m) {
       // ADD YOUR CODE HERE
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].equals(m)){
+              for(int j = i; j < numberOfItems - 1; j++){
+                  items[j] = items[j + 1];
+              }
+              numberOfItems--;
+              items[items.length - 1] = null;
+              return true;
+          }
+      }
+
+      return false;
   }
 
   /*
@@ -98,6 +112,13 @@ public class SongApp {
   */
   public boolean updateRating (Song m, int rating) {
       // ADD YOUR CODE HERE
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].equals(m)){
+              items[i].setRating(rating);
+              return true;
+          }
+      }
+      return false;
   }
 
   /*
@@ -105,7 +126,7 @@ public class SongApp {
   */
   public void print () {
       // ADD YOUR CODE HERE
-      for(int i = 0; i < items.length; i++){
+      for(int i = 0; i < numberOfItems; i++){
           System.out.println(items[i]);
       }
   }
@@ -122,7 +143,7 @@ public class SongApp {
       // ADD YOUR CODE HERE
       Song[] result;
       int count = 0;
-      for(int i = 0; i < items.length; i++){
+      for(int i = 0; i < numberOfItems; i++){
           for(int j = 0; j < items[i].getNumberOfWriters(); j++){
               if(songwriter.equals(items[i].getWriterAtIndex(j))){
                   count++;
@@ -131,10 +152,12 @@ public class SongApp {
           }
       }
       result = new Song[count];
-      for(int i = 0; i < items.length; i++){
+      int index = 0;
+      for(int i = 0; i < numberOfItems; i++){
           for(int j = 0; j < items[i].getNumberOfWriters(); j++){
               if(songwriter.equals(items[i].getWriterAtIndex(j))){
-                  result[i] = items[i];
+                  result[index] = items[i];
+                  index++;
                   break;
               }
           }
@@ -152,6 +175,22 @@ public class SongApp {
   */
   public Song[] getSongsByYear (int year) {
       // ADD YOUR CODE HERE
+      Song[] result;
+      int size = 0;
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].getYear() == year){
+              size++;
+          }
+      }
+      int index = 0;
+      result = new Song[size];
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].getYear() == year){
+              result[index] = items[i];
+              index++;
+          }
+      }
+      return result;
   }
 
   /*
@@ -163,6 +202,7 @@ public class SongApp {
   */
   public Song[] getSongsWithRatingsGreaterThan (int rating) {
       // ADD YOUR CODE HERE
+      return items; //REMOVE THIS
   }
 
   /*
@@ -171,6 +211,7 @@ public class SongApp {
   */
   public Song searchSongByName (String name) {
       // ADD YOUR CODE HERE
+      return items[0]; //REMOVE THIS
   }
 
  /*
@@ -197,5 +238,7 @@ public class SongApp {
   */
   public static Song searchSongByName (String name, Song[] Songs, int l, int r) {
       // ADD YOUR CODE HERE
+      Song x = new Song("h"); //REMOVE THIS
+      return x; //REMOVE THIS
   }
 }
