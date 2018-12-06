@@ -202,7 +202,22 @@ public class SongApp {
   */
   public Song[] getSongsWithRatingsGreaterThan (int rating) {
       // ADD YOUR CODE HERE
-      return items; //REMOVE THIS
+      Song[] result;
+      int size = 0;
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].getRating() > rating){
+              size++;
+          }
+      }
+      int index = 0;
+      result = new Song[size];
+      for(int i = 0; i < numberOfItems; i++){
+          if(items[i].getRating() > rating){
+              result[index] = items[i];
+              index++;
+          }
+      }
+      return result;
   }
 
   /*
@@ -211,7 +226,20 @@ public class SongApp {
   */
   public Song searchSongByName (String name) {
       // ADD YOUR CODE HERE
-      return items[0]; //REMOVE THIS
+      int lIndex = 0;
+      int rIndex = items.length - 1;
+      int mIndex;
+      while(rIndex >= lIndex){
+          mIndex = (lIndex + rIndex) / 2;
+          if(name.compareTo(items[mIndex].getName()) > 0){
+              lIndex = mIndex + 1;
+          } else if(name.compareTo(items[mIndex].getName()) < 0){
+              rIndex = mIndex - 1;
+          } else {
+              return items[mIndex];
+          }
+      }
+      return items[0]; //Remove this
   }
 
  /*

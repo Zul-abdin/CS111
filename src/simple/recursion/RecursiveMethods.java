@@ -112,5 +112,13 @@ public class RecursiveMethods {
 
     }
 
+    public static int repeats(String text, String word){
+        if(text.indexOf(word) == -1){
+            return 0;
+        } else {
+            return 1 + repeats(text.substring(0, text.indexOf(word)) + text.substring(text.indexOf(word) + word.length()), word);
+        }
+    }
+
 
 }
