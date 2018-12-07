@@ -231,15 +231,16 @@ public class SongApp {
       int mIndex;
       while(rIndex >= lIndex){
           mIndex = (lIndex + rIndex) / 2;
-          if(name.compareTo(items[mIndex].getName()) > 0){
+          if(items[mIndex] !=null && name.compareTo(items[mIndex].getName()) > 0){
               lIndex = mIndex + 1;
-          } else if(name.compareTo(items[mIndex].getName()) < 0){
+          } else if(items[mIndex] != null && name.compareTo(items[mIndex].getName()) < 0){
               rIndex = mIndex - 1;
           } else {
               return items[mIndex];
           }
       }
-      return items[0]; //Remove this
+      System.out.println("Song Not Found");
+      return null;
   }
 
  /*
@@ -247,6 +248,19 @@ public class SongApp {
   */
   public void sortByYear () {
       // ADD YOUR CODE HERE
+      for(int i = 1; i < numberOfItems; i++){
+          Song firstUnsorted = items[i];
+          int endSorted = i - 1;
+          while(endSorted >= 0){
+              if(items[endSorted].getYear() > firstUnsorted.getYear()){
+                  items[endSorted + 1] = items[endSorted];
+                  endSorted -= 1;
+              } else {
+                  break;
+              }
+          }
+          items[endSorted + 1] = firstUnsorted;
+      }
   }
 
  /*
@@ -254,6 +268,17 @@ public class SongApp {
   */
   public void sortByName () {
       // ADD YOUR CODE HERE
+      for(int i = numberOfItems - 1; i > 0; i--){
+          int maxloc = 0;
+          for(int j = 1; j <= i; j++){
+              if(items[j].getName().compareTo(items[maxloc].getName()) > 0){
+                  maxloc = j;
+              }
+          }
+          Song temp = items[maxloc];
+          items[maxloc] = items[i];
+          items[i] = temp;
+      }
   }
 
  /*
@@ -266,7 +291,15 @@ public class SongApp {
   */
   public static Song searchSongByName (String name, Song[] Songs, int l, int r) {
       // ADD YOUR CODE HERE
-      Song x = new Song("h"); //REMOVE THIS
-      return x; //REMOVE THIS
+      if(l > r){
+          System.out.println("Song Not Found");
+          return null;
+      } else {
+          if(Songs[l] != null && Songs[l].getName().equals(name)){
+              return Songs[l];
+          } else {
+              return searchSongByName(name, Songs, l + 1, r);
+          }
+      }
   }
 }
