@@ -74,7 +74,7 @@ public class SongApp {
                   items[j] = items[j + 1];
               }
               numberOfItems--;
-              items[items.length - 1] = null;
+              items[numberOfItems] = null;
               return true;
           }
       }
