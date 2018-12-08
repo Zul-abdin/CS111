@@ -11,5 +11,5 @@ Rutgers Fall 2018
 - [x] Object-Oriented Programming
 - [x] Data Structures (Mainly Arrays)
     - [x] Midterm 2 - Tuesday November 13th 9:40PM-11:00PM
-- [ ] Efficiency of Algorithms
+- [x] Efficiency of Algorithms
     - [ ] Final - Friday December 14th 4:00PM-7:00PM
