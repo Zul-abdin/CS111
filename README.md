@@ -1,6 +1,6 @@
 # CS111
 ## Introduction to CS (Java-Oriented) Class Files
-Rutgers Fall 2018
+Rutgers Fall 2018 [Completed]
 
 #### Syllabus Completion
 - [x] Fundamentals of Programming
@@ -12,4 +12,4 @@ Rutgers Fall 2018
 - [x] Data Structures (Mainly Arrays)
     - [x] Midterm 2 - Tuesday November 13th 9:40PM-11:00PM
 - [x] Efficiency of Algorithms
-    - [ ] Final - Friday December 14th 4:00PM-7:00PM
+    - [x] Final - Friday December 14th 4:00PM-7:00PM
